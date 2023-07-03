@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+#texts, #images {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #35424a;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #35424a;
+    color: #ffffff;
+}

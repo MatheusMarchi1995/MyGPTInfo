@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Information Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Job Information</h1>
+    </header>
+
+    <section id="texts">
+        <h2>Texts</h2>
+        <div contenteditable="true" style="border: 1px solid #ccc; padding: 10px;">
+            Click here to edit text...
+        </div>
+    </section>
+
+    <section id="images">
+        <h2>Images</h2>
+        <input type="file" id="imageInput" accept="image/*">
+        <div id="imageContainer"></div>
+    </section>
+
+    <footer>
+        <p>Created with the help of ChatGPT</p>
+    </footer>
+
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = event.target.result;
+                    document.getElementById('imageContainer').appendChild(imgElement);
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+
+</html>
